@@ -9,12 +9,13 @@
          <form name='redirect' style='margin-top:50px;'>
 <center>
 <font face='Arial'>
-Aguarde <input name='redirect2' type='button'/> segundos</font>
+Presa <input name='redirect2' type='button'/> secondi</font>
 </center>
 </form>
+     
 <script>
 
-var targetURL=&quot;https://lavoraitalia.com/onboarding/&quot;
+var targetURL='https://lavoraitalia.com/onboarding/';
 var countdownfrom=1
 
 var currentsecond=document.redirect.redirect2.value=countdownfrom+1
@@ -27,7 +28,7 @@ else{
 window.location=targetURL
 return
 }
-setTimeout(&quot;countredirect()&quot;,0000)
+setTimeout('countredirect()',0000)
 }
 
 countredirect()
