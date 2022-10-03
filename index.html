@@ -1,24 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-  <style>
-     .undefined{
-     text-align: center;
-     }
+
      </style>
   </head>
    <body>
      
-     
-      <p class='undefined'>Presa 3 second</p>
+         <form name='redirect' style='margin-top:50px;'>
+<center>
+<font face='Arial'>
+Aguarde <input name='redirect2' type='button'/> segundos</font>
+</center>
+</form>
+<script>
+
+var targetURL=&quot;https://lavoraitalia.com/onboarding/&quot;
+var countdownfrom=1
+
+var currentsecond=document.redirect.redirect2.value=countdownfrom+1
+function countredirect(){
+if (currentsecond!=1){
+currentsecond-=1
+document.redirect.redirect2.value=currentsecond
+}
+else{
+window.location=targetURL
+return
+}
+setTimeout(&quot;countredirect()&quot;,0000)
+}
+
+countredirect()
+</script>
+
    
   </body>
   
   
-      <script>
-        $(window).load(function() {
-               window.setTimeout(window.location.href = "https://lavoraitalia.com/onboarding",3000);
-            });
-      </script>
+
 </html>
   
