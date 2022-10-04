@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+   <body>
+     
+         <form name='redirect' style='margin-top:50px;'>
+<center>
+<font face='Arial'>
+Presa <input name='redirect2' type='button'/> secondi</font>
+</center>
+</form>
+     
+<script>
+
+var targetURL='https://lavoraitalia.com/onboarding/';
+var countdownfrom=1
+
+var currentsecond=document.redirect.redirect2.value=countdownfrom+1
+function countredirect(){
+if (currentsecond!=1){
+currentsecond-=1
+document.redirect.redirect2.value=currentsecond
+}
+else{
+window.location=targetURL
+return
+}
+setTimeout('countredirect()',0000)
+}
+
+countredirect()
+</script>
+
+   
+  </body>
+  
+  
+
+</html>
